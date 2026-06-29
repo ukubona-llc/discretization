@@ -376,6 +376,133 @@ main { max-width: 780px; margin: 0 auto; padding: 0 2rem 6rem; }
   font-family: var(--mono); font-size: 0.75rem;
   color: var(--amber-dim);
 }
+.iso-table tr.timing-row td {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  font-style: italic;
+  color: var(--muted);
+}
+.iso-table tr.timing-row td:first-child {
+  color: var(--amber-dim);
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+
+/* ── SOVEREIGN METRIC BLOCK ── */
+.sovereign-section {
+  margin-top: 3.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+}
+.sovereign-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+@media (max-width: 520px) { .sovereign-grid { grid-template-columns: 1fr; } }
+.sovereign-card {
+  padding: 1.1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.sovereign-card.accent {
+  border-color: var(--amber-dim);
+  background: var(--amber-glow);
+}
+.sovereign-card .dlabel {
+  font-family: var(--mono); font-size: 0.62rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 0.5rem;
+}
+.sovereign-card p {
+  font-size: 0.82rem; line-height: 1.65;
+  color: var(--text); font-weight: 300;
+}
+.sovereign-card code {
+  font-family: var(--mono); font-size: 0.78rem;
+  color: var(--amber); background: var(--bg);
+  padding: 0.1em 0.3em; border-radius: 2px;
+}
+.sovereign-thesis {
+  margin-top: 1.25rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--surface2);
+  border-left: 3px solid var(--amber);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--text);
+  font-weight: 400;
+}
+.sovereign-thesis em { color: var(--amber); font-style: italic; }
+
+/* ── EPISTEMIC VELOCITY BLOCK ── */
+.ev-section {
+  margin-top: 3.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+}
+.ev-formula-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+@media (max-width: 520px) { .ev-formula-grid { grid-template-columns: 1fr; } }
+.ev-card {
+  padding: 1.1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.ev-card .ev-label {
+  font-family: var(--mono); font-size: 0.62rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 0.6rem;
+}
+.ev-card .ev-eq {
+  font-family: var(--mono); font-size: 0.92rem;
+  color: var(--amber); margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+.ev-card p {
+  font-size: 0.8rem; line-height: 1.65;
+  color: var(--muted); font-weight: 300;
+}
+.ev-card p strong { color: var(--text); font-weight: 400; }
+.ev-max {
+  margin-top: 1rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex; align-items: flex-start; gap: 1.25rem;
+}
+.ev-max .ev-eq-big {
+  font-family: var(--mono); font-size: 1.05rem;
+  color: var(--amber); flex-shrink: 0;
+  line-height: 1.7;
+}
+.ev-max p {
+  font-size: 0.8rem; line-height: 1.65;
+  color: var(--muted); font-weight: 300;
+  padding-top: 0.2rem;
+}
+.ev-max p strong { color: var(--text); font-weight: 400; }
+.ev-warning {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-left: 2px solid var(--amber-dim);
+  background: var(--amber-glow);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 0.8rem; color: var(--text);
+  font-weight: 300; line-height: 1.65;
+}
+.ev-warning strong { color: var(--amber); font-weight: 500; }
 
 /* ── EQUATION BLOCK ── */
 .eq-block {
@@ -709,8 +836,18 @@ footer .ts { font-family: var(--mono); font-size: 0.63rem; color: var(--muted); 
           <td>Next training run</td>
           <td>Updated policy · ecosystem output</td>
         </tr>
+        <tr class="timing-row">
+          <td>timing</td>
+          <td><strong>offline prior</strong> — Berklee absorbed before the keys are touched. Tradition is sedimented eigenmode.</td>
+          <td>online — MSA computed during inference per sequence</td>
+          <td>online — attention recomputed per token</td>
+          <td>online — Jacobian estimated from live telemetry</td>
+        </tr>
       </tbody>
     </table>
+    <p style="margin-top:0.75rem; font-size:0.75rem; color:var(--muted); font-weight:300; line-height:1.6;">
+      <em>Compression timing matters:</em> the gospel musician is the only agent in this table who runs both simultaneously — offline prior (harmonic vocabulary absorbed over years) and online sensitivity (ear responding to this congregation, this room, this moment). That dual operation is what makes a master. It also distinguishes a well-deployed digital twin from a static report.
+    </p>
   </div>
 
   <!-- ── EQUATION ── -->
@@ -728,11 +865,72 @@ footer .ts { font-family: var(--mono); font-size: 0.63rem; color: var(--muted); 
     <div class="eq-row"><span class="eq-sym">↓ ↺</span><span class="eq-arr"></span><span class="eq-desc">tradition updates · loop closes · Okubala si Kulaba</span></div>
   </div>
 
+
+  <!-- ── SOVEREIGN METRIC ── -->
+  <div class="sovereign-section">
+    <p class="iso-title">The roundtable addition · the Jacobian is objective. the metric is sovereign.</p>
+
+    <div class="sovereign-grid">
+      <div class="sovereign-card">
+        <div class="dlabel">What the roundtable clarified</div>
+        <p>Every system uses <code>G = J⊤WJ</code> to describe the metric. But no one had named what <code>W</code> actually is. <code>W</code> is not a free parameter. <code>W</code> is a diagonal matrix whose entries are the weights a specific sovereign agent places on each dimension of the output space. The same Jacobian <code>J</code>, evaluated under different <code>W</code>, gives a completely different geodesic.</p>
+      </div>
+      <div class="sovereign-card">
+        <div class="dlabel">Why this is not a detail</div>
+        <p>Two patients with identical biomarkers can make opposite treatment decisions without either being wrong. They have different <code>W</code>. The ROYGBIV heatmap is not a property of the system. It is a property of the system <em>seen by a particular sovereign</em>. Red for one client may be violet for another. The heatmap is a portrait of values, not just sensitivities.</p>
+      </div>
+      <div class="sovereign-card">
+        <div class="dlabel">Musical reading</div>
+        <p>The same chord progression in the same key sounds tense to a classically trained ear and joyful to a gospel congregation. Same <code>J</code>. Different <code>W</code>. The pianist who reads the room is computing <code>W</code> in real time — not just the harmonic sensitivity, but which sensitivities matter to <em>this</em> audience, <em>this</em> moment.</p>
+      </div>
+      <div class="sovereign-card accent">
+        <div class="dlabel">The distinction from all other AI systems</div>
+        <p>Most systems optimize under their own <code>W</code> — the developer's, the platform's, the advertiser's. Ukubona's claim is that the digital twin hands the client their <code>W</code> and lets them walk the geodesic themselves. The twin computes the path. The sovereign chooses the direction. <em>Sovereignty is the ability to set your own W.</em></p>
+      </div>
+    </div>
+
+    <div class="sovereign-thesis">
+      The Jacobian is objective. <em>The metric is sovereign.</em><br>
+      <span style="font-size:0.82rem; font-family:var(--sans); font-weight:300; color:var(--muted); font-style:normal;">
+        G(θ) = J(θ)⊤ · W(θ) · J(θ) &nbsp;—&nbsp; where W encodes not what the system is, but what it means to the one who must decide.
+      </span>
+    </div>
+  </div>
+
+  <!-- ── EPISTEMIC VELOCITY ── -->
+  <div class="ev-section">
+    <p class="iso-title">Gated epistemic velocity · the roundtable correction</p>
+
+    <div class="ev-formula-grid">
+      <div class="ev-card">
+        <div class="ev-label">Original formulation (GPT)</div>
+        <div class="ev-eq">v_E = −dH / dC</div>
+        <p>Bits of uncertainty removed per unit epistemic cost (tokens, compute, human attention). Mathematically cleaner than the earlier <em>uncertainty × time / tokens</em>. But still missing one thing.</p>
+      </div>
+      <div class="ev-card">
+        <div class="ev-label">The correction (Claude)</div>
+        <div class="ev-eq">v_E = −dH<sub>gated</sub> / dC</div>
+        <p>Where <strong>H_gated</strong> is the entropy of the specific decision variable the client needs to act on — not total system entropy. A system that massively reduces irrelevant uncertainty while leaving H_gated untouched has high apparent epistemic velocity and zero practical value. Most consulting reports look exactly like this.</p>
+      </div>
+    </div>
+
+    <div class="ev-max">
+      <div class="ev-eq-big">max η = v_N / v_E<br><span style="font-size:0.75rem; color:var(--muted);">= (−dL/dR) / (−dH<sub>gated</sub>/dC)</span></div>
+      <p>
+        <strong>The digital twin's true objective:</strong> maximise the conversion of epistemic work into physical progress. Not merely reduce entropy — reduce the entropy that gates the Newtonian decision. <strong>v_N</strong> = real-world progress per unit resource (momentum per dollar). <strong>v_E</strong> = uncertainty removed per epistemic expenditure. The ratio η is what a good digital twin is actually maximising. The gospel pianist maximises this every Sunday: minimal rehearsal cost, maximal congregational resolution.
+      </p>
+    </div>
+
+    <div class="ev-warning">
+      <strong>The premature formalisation warning:</strong> The rootless D9 functions as V9 in G major because the bassist is already holding the root — the systemic environment implies it. This formalism should wait until a specific client engagement demands a specific number, then be derived from that constraint rather than imposed from above. The ontology is ready. The operationalisation follows the scalar, not the other way round.
+    </div>
+  </div>
+
 </main>
 
 <footer>
   <span class="brand">Ukubona LLC</span>
-  <span class="ts">Intelligence as Music · Session Compression · 2026 · Grok → Gemini → GPT → Claude</span>
+  <span class="ts">Intelligence as Music · Session Compression · 2026 · Grok → Gemini → GPT → Claude · extended by roundtable</span>
 </footer>
 
 <script>
